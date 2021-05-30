@@ -47,6 +47,7 @@ final class MathTest extends TestCase
         MinTest,
         OctalToDecimalTest,
         PowTest,
+        ProductTest,
         RadiansToDegreesTest,
         RandomTest,
         RandomIntTest,
@@ -54,6 +55,7 @@ final class MathTest extends TestCase
         SinTest,
         SinhTest,
         SqrtTest,
+        SumTest,
         TanTest,
         TanhTest,
         ToStepTest;

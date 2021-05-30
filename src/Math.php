@@ -21,6 +21,8 @@ use function
     abs,
     acos,
     acosh,
+    array_product,
+    array_sum,
     asin,
     asinh,
     atan,
@@ -488,6 +490,16 @@ abstract class Math
     }
 
     /**
+     * Calculate the product of values.
+     * @param int|float ...$numbers The input numbers.
+     * @return int|float The product of values.
+     */
+    public static function product(int|float ...$numbers): int|float
+    {
+        return array_product($numbers);
+    }
+
+    /**
      * Convert a number of radians to degrees.
      * @param float $number The input number.
      * @return float The number of degrees.
@@ -579,6 +591,16 @@ abstract class Math
     public static function sqrt(float $number): float
     {
         return sqrt($number);
+    }
+
+    /**
+     * Calculate the sum of values.
+     * @param int|float ...$numbers The input numbers.
+     * @return int|float The sum of values.
+     */
+    public static function sum(int|float ...$numbers): int|float
+    {
+        return array_sum($numbers);
     }
 
     /**

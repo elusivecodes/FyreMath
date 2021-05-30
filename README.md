@@ -416,6 +416,16 @@ Raise a number to the power of exponent.
 $pow = Math::pow($number, $exponent);
 ```
 
+**Product**
+
+Calculate the product of values.
+
+All arguments supplied to this method will be multiplied.
+
+```php
+$product = Math::product(...$numbers);
+```
+
 **Radians To Degrees**
 
 Convert a number of radians to degrees.
@@ -494,6 +504,16 @@ Get the square root of a number.
 
 ```php
 $sqrt = Math::sqrt($number);
+```
+
+**Sum**
+
+Calculate the sum of values.
+
+All arguments supplied to this method will be added.
+
+```php
+$sum = Math::sum(...$numbers);
 ```
 
 **Tan**
