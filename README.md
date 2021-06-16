@@ -90,8 +90,8 @@ $atan = Math::atan($number);
 
 Get the arc tangent of 2 numbers.
 
-- `$x` is the dividend number.
-- `$y` is the divisor number.
+- `$x` is a number representing the dividend.
+- `$y` is a number representing the divisor.
 
 ```php
 $atan2 = Math::atan2($x, $y);
@@ -132,8 +132,8 @@ $rounded = Math::ceil($number);
 Clamp a number between a min and max.
 
 - `$number` is the input number.
-- `$min` is the input number, and will default to *0*.
-- `$max` is the input number, and will default to *1*.
+- `$min` is a number representing the minimum of the clamped value, and will default to *0*.
+- `$max` is a number representing the maximum of the clamped value, and will default to *1*.
 
 ```php
 $clamped = Math::clamp($number, $min, $max);
@@ -154,8 +154,8 @@ $clamped = Math::clampPercent($number);
 Convert a number between bases.
 
 - `$number` is the input number.
-- `$fromBase` is the base of the number.
-- `$toBase` is the base to convert to.
+- `$fromBase` is a number representing the base of the number.
+- `$toBase` is a number representing the base to convert to.
 
 ```php
 $newNumber = Math::convertBase($number, $fromBase, $toBase);
@@ -225,10 +225,10 @@ $radians = Math::degreesToRadians($number);
 
 Calculate the distance between 2 points.
 
-- `$x1` is the first X co-ordinate.
-- `$y1` is the first Y co-ordinate.
-- `$x2` is the second X co-ordinate.
-- `$y2` is the second Y co-ordinate.
+- `$x1` is a number representing the first X co-ordinate.
+- `$y1` is a number representing the first Y co-ordinate.
+- `$x2` is a number representing the second X co-ordinate.
+- `$y2` is a number representing the second Y co-ordinate.
 
 ```php
 $distance = Math::dist($x1, $y1, $x2, $y2);
@@ -269,7 +269,7 @@ $rounded = Math::floor($number);
 Calculate the modulo of a number with a divisor.
 
 - `$number` is the input number.
-- `$divisor` is the divisor.
+- `$divisor` is a number representing the divisor.
 
 ```php
 $modulo = Math::fmod($number, $divisor);
@@ -279,7 +279,7 @@ $modulo = Math::fmod($number, $divisor);
 
 Convert a hex number to decimal.
 
-- `$hexString` is the hex number.
+- `$hexString` is the hex string.
 
 ```php
 $decimal = Math::hexToDecimal($hexString);
@@ -289,8 +289,8 @@ $decimal = Math::hexToDecimal($hexString);
 
 Calculate the length of a point.
 
-- `$x` is the X co-ordinate.
-- `$y` is the Y co-ordinate.
+- `$x` is a number representing the X co-ordinate.
+- `$y` is a number representing the Y co-ordinate.
 
 ```php
 $length = Math::hypot($x, $y);
@@ -300,9 +300,9 @@ $length = Math::hypot($x, $y);
 
 Inverse linear interpolation from one value to another.
 
-- `$v1` is the minimum of the range.
-- `$v2` is the maximum of the range.
-- `$value` is the value to inverse interpolate.
+- `$v1` is a number representing the minimum of the range.
+- `$v2` is a number representing the maximum of the range.
+- `$value` is a number representing the value to inverse interpolate.
 
 ```php
 $amount = Math::inverseLerp($v1, $v2, $value);
@@ -322,9 +322,9 @@ $isNumeric = Math::isNumeric($value);
 
 Linear interpolation from one value to another.
 
-- `$v1` is the minimum of the range.
-- `$v2` is the maximum of the range.
-- `$amount` is the amount to interpolate.
+- `$v1` is a number representing the minimum of the range.
+- `$v2` is a number representing the maximum of the range.
+- `$amount` is a number representing the amount to interpolate.
 
 ```php
 $value = Math::lerp($v1, $v2, $amount);
@@ -335,7 +335,7 @@ $value = Math::lerp($v1, $v2, $amount);
 Calculate the logarithm.
 
 - `$number` is the input number.
-- `$base` is the logarithmic base, and will default to *E*.
+- `$base` is a number representing the logarithmic base, and will default to *E*.
 
 ```php
 $log = Math::log($number, $base);
@@ -366,10 +366,10 @@ $log = Math::logPlus1($number);
 Map a value from one range to another.
 
 - `$number` is the input number.
-- `$fromMin` is the minimum value of the current range.
-- `$fromMax` is the maximum value of the current range.
-- `$toMin` is the minimum value of the target range.
-- `$toMax` is the maximum value of the target range.
+- `$fromMin` is a number representing the minimum value of the current range.
+- `$fromMax` is a number representing the maximum value of the current range.
+- `$toMin` is a number representing the minimum value of the target range.
+- `$toMax` is a number representing the maximum value of the target range.
 
 ```php
 $mapped = Math::map($number, $fromMin, $fromMax, $toMin, $toMax);
@@ -399,7 +399,7 @@ $lowest = Math::min(...$numbers);
 
 Convert an octal number to decimal.
 
-- `$octalString` is the octal number.
+- `$octalString` is the octal string.
 
 ```php
 $decimal = Math::octalToDecimal($octalString);
@@ -410,7 +410,7 @@ $decimal = Math::octalToDecimal($octalString);
 Raise a number to the power of exponent.
 
 - `$number` is the input number.
-- `$exponent` is the exponent.
+- `$exponent` is a number representing the exponent.
 
 ```php
 $pow = Math::pow($number, $exponent);
@@ -440,8 +440,8 @@ $degrees = Math::radiansToDegrees($number);
 
 Return a random floating-point number.
 
-- `$a` is the number to be used as the minimum value (inclusive).
-- `$b` is the number to be used as the maximum value (exclusive).
+- `$a` is a number representing the minimum value (inclusive).
+- `$b` is a number representing the maximum value (exclusive).
 
 If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
 
@@ -455,8 +455,8 @@ $random = Math::random($a, $b);
 
 Return a random integer.
 
-- `$a` is the number to be used as the minimum value (inclusive).
-- `$b` is the number to be used as the maximum value (exclusive).
+- `$a` is a number representing the minimum value (inclusive).
+- `$b` is a number representing the maximum value (exclusive).
 
 If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
 
@@ -469,8 +469,8 @@ $randomInt = Math::randomInt($a, $b);
 Round a number.
 
 - `$number` is the input number.
-- `$precision` is the number of decimal digits to use, and will default to *0*.
-- `$mode` is the number of rounding mode to use, and will default to *PHP_ROUND_HALF_UP*.
+- `$precision` is a number representing the number of decimal digits to use, and will default to *0*.
+- `$mode` is a number representing the rounding mode to use, and will default to *Math::ROUND_HALF_UP*.
 
 ```php
 $rounded = Math::round($number, $precision, $mode);
@@ -541,7 +541,7 @@ $tanh = Math::tanh($number);
 Round a number to a specified step-size.
 
 - `$number` is the input number.
-- `$step` is the minimum step-size, and will default to *0.01*.
+- `$step` is a number representing the minimum step-size, and will default to *0.01*.
 
 ```php
 $toStep = Math::toStep($number, $step);
