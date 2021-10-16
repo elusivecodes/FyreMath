@@ -1,5 +1,6 @@
 {
     "name": "fyre/math",
+    "description": "An math utility library.",
     "type": "library",
     "license": "MIT",
     "authors": [
