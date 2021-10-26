@@ -20,7 +20,7 @@ composer install fyre/math
 In PHP:
 
 ```php
-use Fyre\Math;
+use Fyre\Utility\Math;
 ```
 
 

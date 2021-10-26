@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Tests;
 
 use
-    Fyre\Math;
+    Fyre\Utility\Math;
 
 trait ExpMinus1Test
 {
