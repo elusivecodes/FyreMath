@@ -14,7 +14,7 @@
 **Using Composer**
 
 ```
-composer install fyre/math
+composer require fyre/math
 ```
 
 In PHP:
