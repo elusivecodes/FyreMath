@@ -403,12 +403,12 @@ abstract class Math
     /**
      * Calculate the logarithm.
      * @param float $number The input number.
-     * @param float $base The logarithmic base.
+     * @param float|null $base The logarithmic base.
      * @return float The logarithm of number to base.
      */
-    public static function log(float $number, float $base = self::E): float
+    public static function log(float $number, float|null $base = null): float
     {
-        return log($number, $base);
+        return log($number, $base ?? static::E);
     }
 
     /**
@@ -555,12 +555,12 @@ abstract class Math
      * Round a number.
      * @param int|float $number The input number.
      * @param int $precision The number of decimal digits to use.
-     * @param int $mode The rounding mode.
+     * @param int|null $mode The rounding mode.
      * @return float The rounded number.
      */
-    public static function round(int|float $number, int $precision = 0, int $mode = self::ROUND_HALF_UP): float
+    public static function round(int|float $number, int $precision = 0, int|null $mode = null): float
     {
-        return round($number, $precision, $mode);
+        return round($number, $precision, $mode ?? static::ROUND_HALF_UP);
     }
 
     /**
