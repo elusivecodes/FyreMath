@@ -11,7 +11,7 @@ trait MapTest
 
     public function testMap(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             71.875,
             Math::map(25, 10, 50, 25, 150)
         );

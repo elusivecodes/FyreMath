@@ -11,7 +11,7 @@ trait TanTest
 
     public function testTan(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5463024898437905,
             Math::tan(0.5)
         );

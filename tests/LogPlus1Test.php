@@ -11,7 +11,7 @@ trait LogPlus1Test
 
     public function testLogPlus1(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             3.258096538021482,
             Math::logPlus1(25)
         );

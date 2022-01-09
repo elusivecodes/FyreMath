@@ -19,11 +19,16 @@ trait RandomIntTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::randomInt(10);
-            $this->assertTrue(
-                $value >= 0 && $value <= 10
+            $this->assertGreaterThanOrEqual(
+                0,
+                $value
             );
-            $this->assertEquals(
-                Math::round($value),
+            $this->assertLessThanOrEqual(
+                10,
+                $value
+            );
+            $this->assertSame(
+                (int) Math::round($value),
                 $value
             );
             $numbers[] = $value;
@@ -31,8 +36,9 @@ trait RandomIntTest
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 1
+        $this->assertGreaterThan(
+            1,
+            count($numbers)
         );
     }
 
@@ -42,11 +48,16 @@ trait RandomIntTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::randomInt(10, 50);
-            $this->assertTrue(
-                $value >= 10 && $value <= 50
+            $this->assertGreaterThanOrEqual(
+                10,
+                $value
             );
-            $this->assertEquals(
-                Math::round($value),
+            $this->assertLessThanOrEqual(
+                50,
+                $value
+            );
+            $this->assertSame(
+                (int) Math::round($value),
                 $value
             );
             $numbers[] = $value;
@@ -54,8 +65,9 @@ trait RandomIntTest
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 1
+        $this->assertGreaterThan(
+            1,
+            count($numbers)
         );
     }
 
@@ -65,11 +77,16 @@ trait RandomIntTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::randomInt(-50, -10);
-            $this->assertTrue(
-                $value >= -50 && $value <= -10
+            $this->assertGreaterThanOrEqual(
+                -50,
+                $value
             );
-            $this->assertEquals(
-                Math::round($value),
+            $this->assertLessThanOrEqual(
+                -10,
+                $value
+            );
+            $this->assertSame(
+                (int) Math::round($value),
                 $value
             );
             $numbers[] = $value;
@@ -77,8 +94,9 @@ trait RandomIntTest
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 1
+        $this->assertGreaterThan(
+            1,
+            count($numbers)
         );
     }
 

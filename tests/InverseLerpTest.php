@@ -11,7 +11,7 @@ trait InverseLerpTest
 
     public function testInverseLerp(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             .5,
             Math::inverseLerp(50, 100, 75)
         );

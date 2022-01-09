@@ -11,7 +11,7 @@ trait CoshTest
 
     public function testCosh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.1276259652063807,
             Math::cosh(0.5)
         );

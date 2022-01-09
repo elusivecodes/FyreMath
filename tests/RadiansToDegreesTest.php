@@ -11,8 +11,8 @@ trait RadiansToDegreesTest
 
     public function testRadiansToDegrees(): void
     {
-        $this->assertEquals(
-            45,
+        $this->assertSame(
+            45.0,
             Math::radiansToDegrees(0.7853981633974483)
         );
     }

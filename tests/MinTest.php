@@ -11,8 +11,8 @@ trait MinTest
 
     public function testMin(): void
     {
-        $this->assertEquals(
-            10,
+        $this->assertSame(
+            10.0,
             Math::min(25, 10, 50, 25, 150)
         );
     }

@@ -11,7 +11,7 @@ trait AcoshTest
 
     public function testAcosh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.9624236501192069,
             Math::acosh(1.5)
         );

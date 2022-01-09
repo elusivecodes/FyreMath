@@ -11,7 +11,7 @@ trait SinTest
 
     public function testSin(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.479425538604203,
             Math::sin(0.5)
         );

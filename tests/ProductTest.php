@@ -11,7 +11,7 @@ trait ProductTest
 
     public function testProduct(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             24,
             Math::product(2, 3, 4)
         );

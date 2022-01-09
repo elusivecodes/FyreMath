@@ -11,7 +11,7 @@ trait AbsTest
 
     public function testAbs(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1,
             Math::abs(1)
         );
@@ -19,7 +19,7 @@ trait AbsTest
 
     public function testAbsNegative(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1,
             Math::abs(-1)
         );
@@ -27,7 +27,7 @@ trait AbsTest
 
     public function testAbsFloat(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5,
             Math::abs(-0.5)
         );

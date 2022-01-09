@@ -11,8 +11,8 @@ trait CeilTest
 
     public function testCeil(): void
     {
-        $this->assertEquals(
-            2,
+        $this->assertSame(
+            2.0,
             Math::ceil(1.25)
         );
     }

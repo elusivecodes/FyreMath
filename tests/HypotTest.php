@@ -11,7 +11,7 @@ trait HypotTest
 
     public function testHypot(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             2.5495097567963922,
             Math::hypot(0.5, 2.5)
         );

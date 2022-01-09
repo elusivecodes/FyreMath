@@ -11,7 +11,7 @@ trait ExpMinus1Test
 
     public function testExpMinus1(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.6487212707001282,
             Math::expMinus1(0.5)
         );

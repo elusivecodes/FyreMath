@@ -11,8 +11,8 @@ trait MaxTest
 
     public function testMax(): void
     {
-        $this->assertEquals(
-            150,
+        $this->assertSame(
+            150.0,
             Math::max(25, 10, 50, 25, 150)
         );
     }

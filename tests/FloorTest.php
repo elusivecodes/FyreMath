@@ -11,8 +11,8 @@ trait FloorTest
 
     public function testFloor(): void
     {
-        $this->assertEquals(
-            2,
+        $this->assertSame(
+            2.0,
             Math::floor(2.75)
         );
     }

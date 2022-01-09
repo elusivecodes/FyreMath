@@ -11,8 +11,8 @@ trait FmodTest
 
     public function testFmod(): void
     {
-        $this->assertEquals(
-            3,
+        $this->assertSame(
+            3.0,
             Math::fmod(33, 5)
         );
     }

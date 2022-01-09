@@ -11,7 +11,7 @@ trait PowTest
 
     public function testPow(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             256,
             Math::pow(2, 8)
         );

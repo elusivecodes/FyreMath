@@ -19,16 +19,22 @@ trait RandomTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::random();
-            $this->assertTrue(
-                $value >= 0 && $value < 1
+            $this->assertGreaterThanOrEqual(
+                0,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                1,
+                $value
             );
             $numbers[] = $value;
         }
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 100
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
         );
     }
 
@@ -39,8 +45,13 @@ trait RandomTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::random(10);
-            $this->assertTrue(
-                $value >= 0 && $value < 10
+            $this->assertGreaterThanOrEqual(
+                0,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                10,
+                $value
             );
             $numbers[] = $value;
             if ($value > 1) {
@@ -51,11 +62,15 @@ trait RandomTest
         $numbers = array_unique($numbers);
         $numbersHigh = array_unique($numbersHigh);
 
-        $this->assertTrue(
-            count($numbers) > 100
+
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
         );
-        $this->assertTrue(
-            count($numbersHigh) > 50
+
+        $this->assertGreaterThan(
+            50,
+            count($numbersHigh)
         );
     }
 
@@ -65,16 +80,22 @@ trait RandomTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::random(10, 50);
-            $this->assertTrue(
-                $value >= 10 && $value < 50
+            $this->assertGreaterThanOrEqual(
+                10,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                50,
+                $value
             );
             $numbers[] = $value;
         }
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 100
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
         );
     }
 
@@ -84,16 +105,22 @@ trait RandomTest
 
         for ($i = 0; $i < 1000; $i++) {
             $value = Math::random(-50, -10);
-            $this->assertTrue(
-                $value >= -50 && $value < -10
+            $this->assertGreaterThanOrEqual(
+                -50,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                -10,
+                $value
             );
             $numbers[] = $value;
         }
 
         $numbers = array_unique($numbers);
 
-        $this->assertTrue(
-            count($numbers) > 100
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
         );
     }
 

@@ -11,7 +11,7 @@ trait ClampTest
 
     public function testClamp(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5,
             Math::clamp(0.5)
         );
@@ -19,16 +19,16 @@ trait ClampTest
 
     public function testClampBelow(): void
     {
-        $this->assertEquals(
-            1,
+        $this->assertSame(
+            1.0,
             Math::clamp(0, 1, 2)
         );
     }
 
     public function testClampAbove(): void
     {
-        $this->assertEquals(
-            2,
+        $this->assertSame(
+            2.0,
             Math::clamp(3, 1, 2)
         );
     }

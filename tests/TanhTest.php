@@ -11,7 +11,7 @@ trait TanhTest
 
     public function testTanh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.46211715726000974,
             Math::tanh(0.5)
         );

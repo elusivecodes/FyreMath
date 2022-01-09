@@ -11,7 +11,7 @@ trait SinhTest
 
     public function testSinh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5210953054937474,
             Math::sinh(0.5)
         );

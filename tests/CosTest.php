@@ -11,7 +11,7 @@ trait CosTest
 
     public function testCos(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.8775825618903728,
             Math::cos(0.5)
         );

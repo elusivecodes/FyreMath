@@ -11,7 +11,7 @@ trait Log10Test
 
     public function testLog10(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.3979400086720377,
             Math::log10(25)
         );

@@ -11,7 +11,7 @@ trait AcosTest
 
     public function testAcos(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.0471975511965979,
             Math::acos(0.5)
         );

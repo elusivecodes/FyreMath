@@ -11,7 +11,7 @@ trait SqrtTest
 
     public function testSqrt(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.4142135623730951,
             Math::sqrt(2)
         );

@@ -11,15 +11,15 @@ trait RoundTest
 
     public function testRound(): void
     {
-        $this->assertEquals(
-            2,
+        $this->assertSame(
+            2.0,
             Math::round(1.5)
         );
     }
 
     public function testRoundWithPrecision(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.23,
             Math::round(1.2345, 2)
         );
@@ -27,8 +27,8 @@ trait RoundTest
 
     public function testRoundWithMode(): void
     {
-        $this->assertEquals(
-            1,
+        $this->assertSame(
+            1.0,
             Math::round(1.5, 0, Math::ROUND_HALF_DOWN)
         );
     }

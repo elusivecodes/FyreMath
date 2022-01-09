@@ -11,7 +11,7 @@ trait DecimalToBinaryTest
 
     public function testDecimalToBinary(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             '101110',
             Math::decimalToBinary(46)
         );

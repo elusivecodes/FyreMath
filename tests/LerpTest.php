@@ -11,8 +11,8 @@ trait LerpTest
 
     public function testLerp(): void
     {
-        $this->assertEquals(
-            75,
+        $this->assertSame(
+            75.0,
             Math::lerp(50, 100, .5)
         );
     }

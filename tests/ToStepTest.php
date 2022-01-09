@@ -11,7 +11,7 @@ trait ToStepTest
 
     public function testToStep(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.1,
             Math::toStep(0.12345, .1)
         );
@@ -19,8 +19,8 @@ trait ToStepTest
 
     public function testToStepInt(): void
     {
-        $this->assertEquals(
-            132,
+        $this->assertSame(
+            132.0,
             Math::toStep(123, 33)
         );
     }

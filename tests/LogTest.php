@@ -11,7 +11,7 @@ trait LogTest
 
     public function testLog(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             3.2188758248682006,
             Math::log(25)
         );
@@ -19,7 +19,7 @@ trait LogTest
 
     public function testLogWithBase(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             4.643856189774724,
             Math::log(25, 2)
         );

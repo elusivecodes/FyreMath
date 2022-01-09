@@ -11,7 +11,7 @@ trait AsinTest
 
     public function testAsin(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5235987755982989,
             Math::asin(0.5)
         );

@@ -11,9 +11,9 @@ trait HexToDecimalTest
 
     public function testHexToDecimal(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             46,
-            Math::hexToDecimal('2e',)
+            Math::hexToDecimal('2e')
         );
     }
 

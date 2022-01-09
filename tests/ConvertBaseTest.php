@@ -11,7 +11,7 @@ trait ConvertBaseTest
 
     public function testConvertBase(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             '2b',
             Math::convertBase(43, 10, 16)
         );
@@ -19,7 +19,7 @@ trait ConvertBaseTest
 
     public function testConvertBaseString(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             '43',
             Math::convertBase('2b', 16, 10)
         );

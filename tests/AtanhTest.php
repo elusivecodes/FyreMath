@@ -11,7 +11,7 @@ trait AtanhTest
 
     public function testAtanh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.5493061443340548,
             Math::atanh(0.5)
         );

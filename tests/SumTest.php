@@ -11,7 +11,7 @@ trait SumTest
 
     public function testSum(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             9,
             Math::sum(2, 3, 4)
         );

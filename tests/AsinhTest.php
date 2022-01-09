@@ -11,7 +11,7 @@ trait AsinhTest
 
     public function testAsinh(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             1.1947632172871094,
             Math::asinh(1.5)
         );

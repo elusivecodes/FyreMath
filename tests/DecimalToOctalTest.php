@@ -11,7 +11,7 @@ trait DecimalToOctalTest
 
     public function testDecimalToOctal(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             '56',
             Math::decimalToOctal(46)
         );

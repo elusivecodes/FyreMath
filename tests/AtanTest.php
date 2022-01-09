@@ -11,7 +11,7 @@ trait AtanTest
 
     public function testAtan(): void
     {
-        $this->assertEquals(
+        $this->assertSame(
             0.4636476090008061,
             Math::atan(0.5)
         );
