@@ -380,7 +380,7 @@ abstract class Math
      * @param mixed $value The value to test.
      * @return bool TRUE if the value is numeric, otherwise FALSE.
      */
-    public static function isNumeric($value): bool
+    public static function isNumeric(mixed $value): bool
     {
         return is_numeric($value);
     }
