@@ -3,64 +3,62 @@ declare(strict_types=1);
 
 namespace Fyre\Utility;
 
-use const
-    INF,
-    M_E,
-    M_PI,
-    M_PI_2,
-    M_PI_4,
-    PHP_FLOAT_EPSILON,
-    PHP_FLOAT_MAX,
-    PHP_FLOAT_MIN,
-    PHP_ROUND_HALF_DOWN,
-    PHP_ROUND_HALF_EVEN,
-    PHP_ROUND_HALF_ODD,
-    PHP_ROUND_HALF_UP;
+use const INF;
+use const M_E;
+use const M_PI;
+use const M_PI_2;
+use const M_PI_4;
+use const PHP_FLOAT_EPSILON;
+use const PHP_FLOAT_MAX;
+use const PHP_FLOAT_MIN;
+use const PHP_ROUND_HALF_DOWN;
+use const PHP_ROUND_HALF_EVEN;
+use const PHP_ROUND_HALF_ODD;
+use const PHP_ROUND_HALF_UP;
 
-use function
-    abs,
-    acos,
-    acosh,
-    array_product,
-    array_sum,
-    asin,
-    asinh,
-    atan,
-    atan2,
-    atanh,
-    base_convert,
-    bin2hex,
-    bindec,
-    ceil,
-    cos,
-    cosh,
-    decbin,
-    dechex,
-    decoct,
-    deg2rad,
-    exp,
-    expm1,
-    floor,
-    fmod,
-    hex2bin,
-    hexdec,
-    hypot,
-    is_numeric,
-    log10,
-    log1p,
-    log,
-    max,
-    min,
-    octdec,
-    pow,
-    rad2deg,
-    random_int,
-    round,
-    sin,
-    sinh,
-    sqrt,
-    tan,
-    tanh;
+use function abs;
+use function acos;
+use function acosh;
+use function array_product;
+use function array_sum;
+use function asin;
+use function asinh;
+use function atan;
+use function atan2;
+use function atanh;
+use function base_convert;
+use function bin2hex;
+use function bindec;
+use function ceil;
+use function cos;
+use function cosh;
+use function decbin;
+use function dechex;
+use function decoct;
+use function deg2rad;
+use function exp;
+use function expm1;
+use function floor;
+use function fmod;
+use function hex2bin;
+use function hexdec;
+use function hypot;
+use function is_numeric;
+use function log10;
+use function log1p;
+use function log;
+use function max;
+use function min;
+use function octdec;
+use function pow;
+use function rad2deg;
+use function random_int;
+use function round;
+use function sin;
+use function sinh;
+use function sqrt;
+use function tan;
+use function tanh;
 
 /**
  * Math
@@ -73,7 +71,7 @@ abstract class Math
     public const HALF_PI = M_PI_2;
     public const PI = M_PI;
     public const TWO_PI = M_PI * 2;
-    public const TAU = M_PI * 2;
+    public const TAU = self::TWO_PI;
 
     public const INFINITY = INF;
     public const EPSILON = PHP_FLOAT_EPSILON;
@@ -403,12 +401,12 @@ abstract class Math
     /**
      * Calculate the logarithm.
      * @param float $number The input number.
-     * @param float|null $base The logarithmic base.
+     * @param float $base The logarithmic base.
      * @return float The logarithm of number to base.
      */
-    public static function log(float $number, float|null $base = null): float
+    public static function log(float $number, float $base = self::E): float
     {
-        return log($number, $base ?? static::E);
+        return log($number, $base);
     }
 
     /**
@@ -555,12 +553,12 @@ abstract class Math
      * Round a number.
      * @param int|float $number The input number.
      * @param int $precision The number of decimal digits to use.
-     * @param int|null $mode The rounding mode.
+     * @param int $mode The rounding mode.
      * @return float The rounded number.
      */
-    public static function round(int|float $number, int $precision = 0, int|null $mode = null): float
+    public static function round(int|float $number, int $precision = 0, int $mode = self::ROUND_HALF_UP): float
     {
-        return round($number, $precision, $mode ?? static::ROUND_HALF_UP);
+        return round($number, $precision, $mode);
     }
 
     /**
@@ -629,7 +627,7 @@ abstract class Math
      * @param int|float $step The minimum step-size.
      * @return int|float The rounded number.
      */
-    public static function toStep(int|float $number, int|float $step = 0.01): int|float
+    public static function toStep(int|float $number, int|float $step = .01): int|float
     {
         return static::round($number / $step) * $step;
     }

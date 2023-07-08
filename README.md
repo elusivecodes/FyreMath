@@ -1,6 +1,6 @@
 # FyreMath
 
-**FyreMath** is a free, math and number manipulation library for *PHP*.
+**FyreMath** is a free, open-source math and number manipulation library for *PHP*.
 
 
 ## Table Of Contents

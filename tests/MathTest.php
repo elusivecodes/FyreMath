@@ -3,61 +3,59 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use
-    PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 final class MathTest extends TestCase
 {
 
-    use
-        AbsTest,
-        AcosTest,
-        AcoshTest,
-        AsinTest,
-        AsinhTest,
-        AtanTest,
-        Atan2Test,
-        AtanhTest,
-        BinaryToDecimalTest,
-        CeilTest,
-        ClampTest,
-        ClampPercentTest,
-        ConvertBaseTest,
-        CosTest,
-        CoshTest,
-        DecimalToBinaryTest,
-        DecimalToHexTest,
-        DecimalToOctalTest,
-        DegreesToRadiansTest,
-        DistTest,
-        ExpTest,
-        ExpMinus1Test,
-        FloorTest,
-        FmodTest,
-        HexToDecimalTest,
-        HypotTest,
-        InverseLerpTest,
-        IsNumericTest,
-        LerpTest,
-        LogTest,
-        Log10Test,
-        LogPlus1Test,
-        MapTest,
-        MaxTest,
-        MinTest,
-        OctalToDecimalTest,
-        PowTest,
-        ProductTest,
-        RadiansToDegreesTest,
-        RandomTest,
-        RandomIntTest,
-        RoundTest,
-        SinTest,
-        SinhTest,
-        SqrtTest,
-        SumTest,
-        TanTest,
-        TanhTest,
-        ToStepTest;
+    use AbsTestTrait;
+    use AcosTestTrait;
+    use AcoshTestTrait;
+    use AsinTestTrait;
+    use AsinhTestTrait;
+    use AtanTestTrait;
+    use Atan2TestTrait;
+    use AtanhTestTrait;
+    use BinaryToDecimalTestTrait;
+    use CeilTestTrait;
+    use ClampTestTrait;
+    use ClampPercentTestTrait;
+    use ConvertBaseTestTrait;
+    use CosTestTrait;
+    use CoshTestTrait;
+    use DecimalToBinaryTestTrait;
+    use DecimalToHexTestTrait;
+    use DecimalToOctalTestTrait;
+    use DegreesToRadiansTestTrait;
+    use DistTestTrait;
+    use ExpTestTrait;
+    use ExpMinus1TestTrait;
+    use FloorTestTrait;
+    use FmodTestTrait;
+    use HexToDecimalTestTrait;
+    use HypotTestTrait;
+    use InverseLerpTestTrait;
+    use IsNumericTestTrait;
+    use LerpTestTrait;
+    use LogTestTrait;
+    use Log10TestTrait;
+    use LogPlus1TestTrait;
+    use MapTestTrait;
+    use MaxTestTrait;
+    use MinTestTrait;
+    use OctalToDecimalTestTrait;
+    use PowTestTrait;
+    use ProductTestTrait;
+    use RadiansToDegreesTestTrait;
+    use RandomTestTrait;
+    use RandomIntTestTrait;
+    use RoundTestTrait;
+    use SinTestTrait;
+    use SinhTestTrait;
+    use SqrtTestTrait;
+    use SumTestTrait;
+    use TanTestTrait;
+    use TanhTestTrait;
+    use ToStepTestTrait;
 
 }
