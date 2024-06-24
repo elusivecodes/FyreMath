@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait SinTestTrait
 {
-
     public function testSin(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait SinTestTrait
             Math::sin(.5)
         );
     }
-
 }

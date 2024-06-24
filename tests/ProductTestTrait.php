@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait ProductTestTrait
 {
-
     public function testProduct(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait ProductTestTrait
             Math::product(2, 3, 4)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait MapTestTrait
 {
-
     public function testMap(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait MapTestTrait
             Math::map(25, 10, 50, 25, 150)
         );
     }
-
 }

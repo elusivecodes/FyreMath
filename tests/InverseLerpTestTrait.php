@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait InverseLerpTestTrait
 {
-
     public function testInverseLerp(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait InverseLerpTestTrait
             Math::inverseLerp(50, 100, 75)
         );
     }
-
 }

@@ -3,19 +3,6 @@ declare(strict_types=1);
 
 namespace Fyre\Utility;
 
-use const INF;
-use const M_E;
-use const M_PI;
-use const M_PI_2;
-use const M_PI_4;
-use const PHP_FLOAT_EPSILON;
-use const PHP_FLOAT_MAX;
-use const PHP_FLOAT_MIN;
-use const PHP_ROUND_HALF_DOWN;
-use const PHP_ROUND_HALF_EVEN;
-use const PHP_ROUND_HALF_ODD;
-use const PHP_ROUND_HALF_UP;
-
 use function abs;
 use function acos;
 use function acosh;
@@ -42,9 +29,9 @@ use function fmod;
 use function hexdec;
 use function hypot;
 use function is_numeric;
+use function log;
 use function log10;
 use function log1p;
-use function log;
 use function max;
 use function min;
 use function octdec;
@@ -58,37 +45,47 @@ use function sqrt;
 use function tan;
 use function tanh;
 
+use const INF;
+use const M_E;
+use const M_PI;
+use const M_PI_2;
+use const M_PI_4;
+use const PHP_FLOAT_EPSILON;
+use const PHP_FLOAT_MAX;
+use const PHP_FLOAT_MIN;
+use const PHP_ROUND_HALF_DOWN;
+use const PHP_ROUND_HALF_EVEN;
+use const PHP_ROUND_HALF_ODD;
+use const PHP_ROUND_HALF_UP;
+
 /**
  * Math
  */
 abstract class Math
 {
-
     public const E = M_E;
-    public const QUARTER_PI = M_PI_4;
-    public const HALF_PI = M_PI_2;
-    public const PI = M_PI;
-    public const TWO_PI = M_PI * 2;
-    public const TAU = self::TWO_PI;
-
-    public const INFINITY = INF;
     public const EPSILON = PHP_FLOAT_EPSILON;
     public const FLOAT_MAX = PHP_FLOAT_MAX;
     public const FLOAT_MIN = PHP_FLOAT_MIN;
+    public const HALF_PI = M_PI_2;
+    public const INFINITY = INF;
     public const INT_MAX = PHP_INT_MAX;
     public const INT_MIN = PHP_INT_MIN;
-
-    public const ROUND_HALF_UP = PHP_ROUND_HALF_UP;
+    public const PI = M_PI;
+    public const QUARTER_PI = M_PI_4;
     public const ROUND_HALF_DOWN = PHP_ROUND_HALF_DOWN;
     public const ROUND_HALF_EVEN = PHP_ROUND_HALF_EVEN;
     public const ROUND_HALF_ODD = PHP_ROUND_HALF_ODD;
+    public const ROUND_HALF_UP = PHP_ROUND_HALF_UP;
+    public const TAU = M_PI * 2;
+    public const TWO_PI = M_PI * 2;
 
     /**
      * Get the absolute value of a number.
      * @param int|float $number The input number.
      * @return int|float The absolute value.
      */
-    public static function abs(int|float $number): int|float
+    public static function abs(float|int $number): float|int
     {
         return abs($number);
     }
@@ -169,7 +166,7 @@ abstract class Math
      * @param string $binaryString The binary string.
      * @return int|float The decimal number.
      */
-    public static function binaryToDecimal(string $binaryString): int|float
+    public static function binaryToDecimal(string $binaryString): float|int
     {
         return bindec($binaryString);
     }
@@ -179,7 +176,7 @@ abstract class Math
      * @param int|float $number The input number.
      * @return float The rounded number.
      */
-    public static function ceil(int|float $number): float
+    public static function ceil(float|int $number): float
     {
         return ceil($number);
     }
@@ -191,7 +188,7 @@ abstract class Math
      * @param int|float $max The maximum number.
      * @return int|float The clamped number.
      */
-    public static function clamp(int|float $number, int|float $min = 0, int|float $max = 1): int|float
+    public static function clamp(float|int $number, float|int $min = 0, float|int $max = 1): float|int
     {
         return static::max(
             $min,
@@ -204,7 +201,7 @@ abstract class Math
      * @param int|float $number The input number.
      * @return int|float The clamped number.
      */
-    public static function clampPercent(int|float $number): int|float
+    public static function clampPercent(float|int $number): float|int
     {
         return static::clamp($number, 0, 100);
     }
@@ -216,7 +213,7 @@ abstract class Math
      * @param int $toBase The base to convert to.
      * @return string The number with converted base.
      */
-    public static function convertBase(string|int $number, int $fromBase, int $toBase): string
+    public static function convertBase(int|string $number, int $fromBase, int $toBase): string
     {
         return base_convert((string) $number, $fromBase, $toBase);
     }
@@ -343,7 +340,7 @@ abstract class Math
      * @param string $hexString The hex number.
      * @return int|float The decimal number.
      */
-    public static function hexToDecimal(string $hexString): int|float
+    public static function hexToDecimal(string $hexString): float|int
     {
         return hexdec($hexString);
     }
@@ -469,7 +466,7 @@ abstract class Math
      * @param string $octalString The octal number.
      * @return int|float The decimal number.
      */
-    public static function octalToDecimal(string $octalString): int|float
+    public static function octalToDecimal(string $octalString): float|int
     {
         return octdec($octalString);
     }
@@ -480,7 +477,7 @@ abstract class Math
      * @param int|float $exponent The exponent.
      * @return int|float The number raised to the power of exponent.
      */
-    public static function pow(int|float $number, int|float $exponent): int|float
+    public static function pow(float|int $number, float|int $exponent): float|int
     {
         return pow($number, $exponent);
     }
@@ -490,7 +487,7 @@ abstract class Math
      * @param int|float ...$numbers The input numbers.
      * @return int|float The product of values.
      */
-    public static function product(int|float ...$numbers): int|float
+    public static function product(float|int ...$numbers): float|int
     {
         return array_product($numbers);
     }
@@ -514,7 +511,7 @@ abstract class Math
     public static function random(float|null $a = null, float|null $b = null): float
     {
         if ($a === null) {
-            return random_int(0, static::INT_MAX) / static::INT_MAX ;
+            return random_int(0, static::INT_MAX) / static::INT_MAX;
         }
 
         if ($b === null) {
@@ -554,7 +551,7 @@ abstract class Math
      * @param int $mode The rounding mode.
      * @return float The rounded number.
      */
-    public static function round(int|float $number, int $precision = 0, int $mode = self::ROUND_HALF_UP): float
+    public static function round(float|int $number, int $precision = 0, int $mode = self::ROUND_HALF_UP): float
     {
         return round($number, $precision, $mode);
     }
@@ -594,7 +591,7 @@ abstract class Math
      * @param int|float ...$numbers The input numbers.
      * @return int|float The sum of values.
      */
-    public static function sum(int|float ...$numbers): int|float
+    public static function sum(float|int ...$numbers): float|int
     {
         return array_sum($numbers);
     }
@@ -625,9 +622,8 @@ abstract class Math
      * @param int|float $step The minimum step-size.
      * @return int|float The rounded number.
      */
-    public static function toStep(int|float $number, int|float $step = .01): int|float
+    public static function toStep(float|int $number, float|int $step = .01): float|int
     {
         return static::round($number / $step) * $step;
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait Log10TestTrait
 {
-
     public function testLog10(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait Log10TestTrait
             Math::log10(25)
         );
     }
-
 }

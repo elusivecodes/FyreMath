@@ -5,12 +5,11 @@ namespace Tests;
 
 use Fyre\Utility\Math;
 
-use function count;
 use function array_unique;
+use function count;
 
 trait RandomTestTrait
 {
-
     public function testRandom(): void
     {
         $numbers = [];
@@ -24,6 +23,58 @@ trait RandomTestTrait
             );
             $this->assertLessThanOrEqual(
                 1,
+                $value
+            );
+            $numbers[] = $value;
+        }
+
+        $numbers = array_unique($numbers);
+
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
+        );
+    }
+
+    public function testRandomNegative(): void
+    {
+        $numbers = [];
+
+        for ($i = 0; $i < 1000; $i++) {
+            $value = Math::random(-50, -10);
+            $this->assertIsFloat($value);
+            $this->assertGreaterThanOrEqual(
+                -50,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                -10,
+                $value
+            );
+            $numbers[] = $value;
+        }
+
+        $numbers = array_unique($numbers);
+
+        $this->assertGreaterThan(
+            100,
+            count($numbers)
+        );
+    }
+
+    public function testRandomWithMax(): void
+    {
+        $numbers = [];
+
+        for ($i = 0; $i < 1000; $i++) {
+            $value = Math::random(10, 50);
+            $this->assertIsFloat($value);
+            $this->assertGreaterThanOrEqual(
+                10,
+                $value
+            );
+            $this->assertLessThanOrEqual(
+                50,
                 $value
             );
             $numbers[] = $value;
@@ -73,57 +124,4 @@ trait RandomTestTrait
             count($numbersHigh)
         );
     }
-
-    public function testRandomWithMax(): void
-    {
-        $numbers = [];
-
-        for ($i = 0; $i < 1000; $i++) {
-            $value = Math::random(10, 50);
-            $this->assertIsFloat($value);
-            $this->assertGreaterThanOrEqual(
-                10,
-                $value
-            );
-            $this->assertLessThanOrEqual(
-                50,
-                $value
-            );
-            $numbers[] = $value;
-        }
-
-        $numbers = array_unique($numbers);
-
-        $this->assertGreaterThan(
-            100,
-            count($numbers)
-        );
-    }
-
-    public function testRandomNegative(): void
-    {
-        $numbers = [];
-
-        for ($i = 0; $i < 1000; $i++) {
-            $value = Math::random(-50, -10);
-            $this->assertIsFloat($value);
-            $this->assertGreaterThanOrEqual(
-                -50,
-                $value
-            );
-            $this->assertLessThanOrEqual(
-                -10,
-                $value
-            );
-            $numbers[] = $value;
-        }
-
-        $numbers = array_unique($numbers);
-
-        $this->assertGreaterThan(
-            100,
-            count($numbers)
-        );
-    }
-
 }

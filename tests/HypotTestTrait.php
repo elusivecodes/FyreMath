@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait HypotTestTrait
 {
-
     public function testHypot(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait HypotTestTrait
             Math::hypot(.5, 2.5)
         );
     }
-
 }

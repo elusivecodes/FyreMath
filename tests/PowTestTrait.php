@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait PowTestTrait
 {
-
     public function testPow(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait PowTestTrait
             Math::pow(2, 8)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait ConvertBaseTestTrait
 {
-
     public function testConvertBase(): void
     {
         $this->assertSame(
@@ -23,5 +22,4 @@ trait ConvertBaseTestTrait
             Math::convertBase('2b', 16, 10)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait AcoshTestTrait
 {
-
     public function testAcosh(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait AcoshTestTrait
             Math::acosh(1.5)
         );
     }
-
 }

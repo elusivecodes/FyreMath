@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait SqrtTestTrait
 {
-
     public function testSqrt(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait SqrtTestTrait
             Math::sqrt(2)
         );
     }
-
 }

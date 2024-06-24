@@ -7,20 +7,11 @@ use Fyre\Utility\Math;
 
 trait AbsTestTrait
 {
-
     public function testAbs(): void
     {
         $this->assertSame(
             1,
             Math::abs(1)
-        );
-    }
-
-    public function testAbsNegative(): void
-    {
-        $this->assertSame(
-            1,
-            Math::abs(-1)
         );
     }
 
@@ -32,4 +23,11 @@ trait AbsTestTrait
         );
     }
 
+    public function testAbsNegative(): void
+    {
+        $this->assertSame(
+            1,
+            Math::abs(-1)
+        );
+    }
 }

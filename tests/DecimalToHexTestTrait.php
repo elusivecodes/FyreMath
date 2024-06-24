@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait DecimalToHexTestTrait
 {
-
     public function testDecimalToHex(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait DecimalToHexTestTrait
             Math::decimalToHex(46)
         );
     }
-
 }

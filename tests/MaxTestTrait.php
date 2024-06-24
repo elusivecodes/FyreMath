@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait MaxTestTrait
 {
-
     public function testMax(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait MaxTestTrait
             Math::max(25, 10, 50, 25, 150)
         );
     }
-
 }

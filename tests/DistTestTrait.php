@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait DistTestTrait
 {
-
     public function testDist(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait DistTestTrait
             Math::dist(.5, 1.5, 2, 2.5)
         );
     }
-
 }

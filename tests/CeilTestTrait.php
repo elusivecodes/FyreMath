@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait CeilTestTrait
 {
-
     public function testCeil(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait CeilTestTrait
             Math::ceil(1.25)
         );
     }
-
 }

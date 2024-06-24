@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait BinaryToDecimalTestTrait
 {
-
     public function testBinaryToDecimal(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait BinaryToDecimalTestTrait
             Math::binaryToDecimal('101110')
         );
     }
-
 }

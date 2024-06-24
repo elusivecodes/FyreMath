@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait CosTestTrait
 {
-
     public function testCos(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait CosTestTrait
             Math::cos(.5)
         );
     }
-
 }

@@ -7,20 +7,11 @@ use Fyre\Utility\Math;
 
 trait ClampTestTrait
 {
-
     public function testClamp(): void
     {
         $this->assertSame(
             .5,
             Math::clamp(.5)
-        );
-    }
-
-    public function testClampBelow(): void
-    {
-        $this->assertSame(
-            1.0,
-            Math::clamp(0, 1, 2)
         );
     }
 
@@ -32,4 +23,11 @@ trait ClampTestTrait
         );
     }
 
+    public function testClampBelow(): void
+    {
+        $this->assertSame(
+            1.0,
+            Math::clamp(0, 1, 2)
+        );
+    }
 }

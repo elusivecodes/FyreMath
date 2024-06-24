@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait ExpTestTrait
 {
-
     public function testExp(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait ExpTestTrait
             Math::exp(.5)
         );
     }
-
 }

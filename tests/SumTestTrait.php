@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait SumTestTrait
 {
-
     public function testSum(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait SumTestTrait
             Math::sum(2, 3, 4)
         );
     }
-
 }

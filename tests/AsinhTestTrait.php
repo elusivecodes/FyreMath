@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait AsinhTestTrait
 {
-
     public function testAsinh(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait AsinhTestTrait
             Math::asinh(1.5)
         );
     }
-
 }

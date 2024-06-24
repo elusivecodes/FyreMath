@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait TanhTestTrait
 {
-
     public function testTanh(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait TanhTestTrait
             Math::tanh(.5)
         );
     }
-
 }

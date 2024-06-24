@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait RadiansToDegreesTestTrait
 {
-
     public function testRadiansToDegrees(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait RadiansToDegreesTestTrait
             Math::radiansToDegrees(.7853981633974483)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait MinTestTrait
 {
-
     public function testMin(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait MinTestTrait
             Math::min(25, 10, 50, 25, 150)
         );
     }
-
 }

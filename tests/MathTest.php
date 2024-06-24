@@ -7,29 +7,28 @@ use PHPUnit\Framework\TestCase;
 
 final class MathTest extends TestCase
 {
-
     use AbsTestTrait;
-    use AcosTestTrait;
     use AcoshTestTrait;
-    use AsinTestTrait;
+    use AcosTestTrait;
     use AsinhTestTrait;
-    use AtanTestTrait;
+    use AsinTestTrait;
     use Atan2TestTrait;
     use AtanhTestTrait;
+    use AtanTestTrait;
     use BinaryToDecimalTestTrait;
     use CeilTestTrait;
-    use ClampTestTrait;
     use ClampPercentTestTrait;
+    use ClampTestTrait;
     use ConvertBaseTestTrait;
-    use CosTestTrait;
     use CoshTestTrait;
+    use CosTestTrait;
     use DecimalToBinaryTestTrait;
     use DecimalToHexTestTrait;
     use DecimalToOctalTestTrait;
     use DegreesToRadiansTestTrait;
     use DistTestTrait;
-    use ExpTestTrait;
     use ExpMinus1TestTrait;
+    use ExpTestTrait;
     use FloorTestTrait;
     use FmodTestTrait;
     use HexToDecimalTestTrait;
@@ -37,9 +36,9 @@ final class MathTest extends TestCase
     use InverseLerpTestTrait;
     use IsNumericTestTrait;
     use LerpTestTrait;
-    use LogTestTrait;
     use Log10TestTrait;
     use LogPlus1TestTrait;
+    use LogTestTrait;
     use MapTestTrait;
     use MaxTestTrait;
     use MinTestTrait;
@@ -47,15 +46,15 @@ final class MathTest extends TestCase
     use PowTestTrait;
     use ProductTestTrait;
     use RadiansToDegreesTestTrait;
-    use RandomTestTrait;
     use RandomIntTestTrait;
+    use RandomTestTrait;
     use RoundTestTrait;
-    use SinTestTrait;
     use SinhTestTrait;
+    use SinTestTrait;
     use SqrtTestTrait;
     use SumTestTrait;
-    use TanTestTrait;
     use TanhTestTrait;
+    use TanTestTrait;
     use ToStepTestTrait;
 
 }

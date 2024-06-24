@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait ToStepTestTrait
 {
-
     public function testToStep(): void
     {
         $this->assertSame(
@@ -23,5 +22,4 @@ trait ToStepTestTrait
             Math::toStep(123, 33)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait Atan2TestTrait
 {
-
     public function testAtan2(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait Atan2TestTrait
             Math::atan2(.5, 1.5)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait DecimalToOctalTestTrait
 {
-
     public function testDecimalToOctal(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait DecimalToOctalTestTrait
             Math::decimalToOctal(46)
         );
     }
-
 }

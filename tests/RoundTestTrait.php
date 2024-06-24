@@ -7,20 +7,11 @@ use Fyre\Utility\Math;
 
 trait RoundTestTrait
 {
-
     public function testRound(): void
     {
         $this->assertSame(
             2.0,
             Math::round(1.5)
-        );
-    }
-
-    public function testRoundWithPrecision(): void
-    {
-        $this->assertSame(
-            1.23,
-            Math::round(1.2345, 2)
         );
     }
 
@@ -32,4 +23,11 @@ trait RoundTestTrait
         );
     }
 
+    public function testRoundWithPrecision(): void
+    {
+        $this->assertSame(
+            1.23,
+            Math::round(1.2345, 2)
+        );
+    }
 }

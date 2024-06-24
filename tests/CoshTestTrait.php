@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait CoshTestTrait
 {
-
     public function testCosh(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait CoshTestTrait
             Math::cosh(.5)
         );
     }
-
 }

@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait FloorTestTrait
 {
-
     public function testFloor(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait FloorTestTrait
             Math::floor(2.75)
         );
     }
-
 }

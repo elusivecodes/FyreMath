@@ -7,7 +7,6 @@ use Fyre\Utility\Math;
 
 trait FmodTestTrait
 {
-
     public function testFmod(): void
     {
         $this->assertSame(
@@ -15,5 +14,4 @@ trait FmodTestTrait
             Math::fmod(33, 5)
         );
     }
-
 }
