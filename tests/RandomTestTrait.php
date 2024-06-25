@@ -113,7 +113,6 @@ trait RandomTestTrait
         $numbers = array_unique($numbers);
         $numbersHigh = array_unique($numbersHigh);
 
-
         $this->assertGreaterThan(
             100,
             count($numbers)

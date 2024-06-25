@@ -64,24 +64,40 @@ use const PHP_ROUND_HALF_UP;
 abstract class Math
 {
     public const E = M_E;
+
     public const EPSILON = PHP_FLOAT_EPSILON;
+
     public const FLOAT_MAX = PHP_FLOAT_MAX;
+
     public const FLOAT_MIN = PHP_FLOAT_MIN;
+
     public const HALF_PI = M_PI_2;
+
     public const INFINITY = INF;
+
     public const INT_MAX = PHP_INT_MAX;
+
     public const INT_MIN = PHP_INT_MIN;
+
     public const PI = M_PI;
+
     public const QUARTER_PI = M_PI_4;
+
     public const ROUND_HALF_DOWN = PHP_ROUND_HALF_DOWN;
+
     public const ROUND_HALF_EVEN = PHP_ROUND_HALF_EVEN;
+
     public const ROUND_HALF_ODD = PHP_ROUND_HALF_ODD;
+
     public const ROUND_HALF_UP = PHP_ROUND_HALF_UP;
+
     public const TAU = M_PI * 2;
+
     public const TWO_PI = M_PI * 2;
 
     /**
      * Get the absolute value of a number.
+     *
      * @param int|float $number The input number.
      * @return int|float The absolute value.
      */
@@ -92,6 +108,7 @@ abstract class Math
 
     /**
      * Get the arc cosine of a number.
+     *
      * @param float $number The input number.
      * @return float The arc cosine.
      */
@@ -102,6 +119,7 @@ abstract class Math
 
     /**
      * Get the inverse hyperbolic cosine of a number.
+     *
      * @param float $number The input number.
      * @return float The inverse hyperbolic cosine.
      */
@@ -112,6 +130,7 @@ abstract class Math
 
     /**
      * Get the arc sine of a number.
+     *
      * @param float $number The input number.
      * @return float The arc sine.
      */
@@ -122,6 +141,7 @@ abstract class Math
 
     /**
      * Get the inverse hyperbolic sine of a number.
+     *
      * @param float $number The input number.
      * @return float The inverse hyperbolic sine.
      */
@@ -132,6 +152,7 @@ abstract class Math
 
     /**
      * Get the arc tangent of a number.
+     *
      * @param float $number The input number.
      * @return float The arc tangent.
      */
@@ -142,6 +163,7 @@ abstract class Math
 
     /**
      * Get the arc tangent of 2 numbers.
+     *
      * @param float $x The dividend number.
      * @param float $x The divisor number.
      * @return float The arc tangent.
@@ -153,6 +175,7 @@ abstract class Math
 
     /**
      * Get the inverse hyperbolic tangent of a number.
+     *
      * @param float $number The input number.
      * @return float The inverse hyperbolic tangent.
      */
@@ -163,6 +186,7 @@ abstract class Math
 
     /**
      * Convert a binary number to decimal.
+     *
      * @param string $binaryString The binary string.
      * @return int|float The decimal number.
      */
@@ -173,6 +197,7 @@ abstract class Math
 
     /**
      * Round a number up.
+     *
      * @param int|float $number The input number.
      * @return float The rounded number.
      */
@@ -183,6 +208,7 @@ abstract class Math
 
     /**
      * Clamp a number between a min and max.
+     *
      * @param int|float $number The input number.
      * @param int|float $min The minimum number.
      * @param int|float $max The maximum number.
@@ -198,6 +224,7 @@ abstract class Math
 
     /**
      * Clamp a number between 0 and 100.
+     *
      * @param int|float $number The input number.
      * @return int|float The clamped number.
      */
@@ -208,6 +235,7 @@ abstract class Math
 
     /**
      * Convert a number between bases.
+     *
      * @param string|int $number The input number.
      * @param int $fromBase The base of the number.
      * @param int $toBase The base to convert to.
@@ -220,6 +248,7 @@ abstract class Math
 
     /**
      * Get the cosine of a number.
+     *
      * @param float $number The input number.
      * @return float The cosine.
      */
@@ -230,6 +259,7 @@ abstract class Math
 
     /**
      * Get the hyperbolic cosine of a number.
+     *
      * @param float $number The input number.
      * @return float The hyperbolic cosine.
      */
@@ -240,6 +270,7 @@ abstract class Math
 
     /**
      * Convert a decimal number to binary.
+     *
      * @param int $number The input number.
      * @return string The binary number.
      */
@@ -250,6 +281,7 @@ abstract class Math
 
     /**
      * Convert a decimal number to hex.
+     *
      * @param int $number The input number.
      * @return string The hex number.
      */
@@ -260,6 +292,7 @@ abstract class Math
 
     /**
      * Convert a decimal number to octal.
+     *
      * @param int $number The input number.
      * @return string The octal number.
      */
@@ -270,6 +303,7 @@ abstract class Math
 
     /**
      * Convert a number of degrees to radians.
+     *
      * @param float $number The input number.
      * @return float The number of radians.
      */
@@ -280,6 +314,7 @@ abstract class Math
 
     /**
      * Calculate the distance between 2 points.
+     *
      * @param float $x1 The first X co-ordinate.
      * @param float $y1 The first X co-ordinate.
      * @param float $x2 The second X co-ordinate.
@@ -296,6 +331,7 @@ abstract class Math
 
     /**
      * Calculate the exponent of e.
+     *
      * @param float $number The input number.
      * @return float The exponent of e.
      */
@@ -306,6 +342,7 @@ abstract class Math
 
     /**
      * Calculate the exponent of e minus 1.
+     *
      * @param float $number The input number.
      * @return float The exponent of e minus 1.
      */
@@ -316,6 +353,7 @@ abstract class Math
 
     /**
      * Round a number down.
+     *
      * @param int|float $number The input number.
      * @return float The rounded number.
      */
@@ -326,6 +364,7 @@ abstract class Math
 
     /**
      * Calculate the modulo of a number with a divisor.
+     *
      * @param float $number The input number.
      * @param float $divisor The divisor.
      * @return float The modulo.
@@ -337,6 +376,7 @@ abstract class Math
 
     /**
      * Convert a hex number to decimal.
+     *
      * @param string $hexString The hex number.
      * @return int|float The decimal number.
      */
@@ -347,6 +387,7 @@ abstract class Math
 
     /**
      * Calculate the length of a point.
+     *
      * @param float $x The X co-ordinate.
      * @param float $y The Y co-ordinate.
      * @return float The length.
@@ -358,6 +399,7 @@ abstract class Math
 
     /**
      * Inverse linear interpolation from one value to another.
+     *
      * @param float $v1 The minimum of the range.
      * @param float $v2 The maximum of the range.
      * @param float $value The value to inverse interpolate.
@@ -370,6 +412,7 @@ abstract class Math
 
     /**
      * Determine if the value is numeric.
+     *
      * @param mixed $value The value to test.
      * @return bool TRUE if the value is numeric, otherwise FALSE.
      */
@@ -380,6 +423,7 @@ abstract class Math
 
     /**
      * Linear interpolation from one value to another.
+     *
      * @param float $v1 The minimum of the range.
      * @param float $v2 The maximum of the range.
      * @param float $amount The amount to interpolate.
@@ -395,6 +439,7 @@ abstract class Math
 
     /**
      * Calculate the logarithm.
+     *
      * @param float $number The input number.
      * @param float $base The logarithmic base.
      * @return float The logarithm of number to base.
@@ -406,6 +451,7 @@ abstract class Math
 
     /**
      * Calculate the base-10 logarithm.
+     *
      * @param float $number The input number.
      * @return float The base-10 logarithm.
      */
@@ -416,6 +462,7 @@ abstract class Math
 
     /**
      * Calculate the logarithm of a number + 1.
+     *
      * @param float $number The input number.
      * @return float The logarithm of number plus 1.
      */
@@ -426,6 +473,7 @@ abstract class Math
 
     /**
      * Map a value from one range to another.
+     *
      * @param float $number The input number.
      * @param float $fromMin The minimum value of the current range.
      * @param float $fromMax The maximum value of the current range.
@@ -443,6 +491,7 @@ abstract class Math
 
     /**
      * Find the highest value.
+     *
      * @param float ...$numbers The values to compare.
      * @return float The highest value.
      */
@@ -453,6 +502,7 @@ abstract class Math
 
     /**
      * Find the lowest value.
+     *
      * @param float ...$numbers The values to compare.
      * @return float The lowest value.
      */
@@ -463,6 +513,7 @@ abstract class Math
 
     /**
      * Convert an octal number to decimal.
+     *
      * @param string $octalString The octal number.
      * @return int|float The decimal number.
      */
@@ -473,6 +524,7 @@ abstract class Math
 
     /**
      * Raise a number to the power of exponent.
+     *
      * @param int|float $number The input number.
      * @param int|float $exponent The exponent.
      * @return int|float The number raised to the power of exponent.
@@ -484,6 +536,7 @@ abstract class Math
 
     /**
      * Calculate the product of values.
+     *
      * @param int|float ...$numbers The input numbers.
      * @return int|float The product of values.
      */
@@ -494,6 +547,7 @@ abstract class Math
 
     /**
      * Convert a number of radians to degrees.
+     *
      * @param float $number The input number.
      * @return float The number of degrees.
      */
@@ -504,6 +558,7 @@ abstract class Math
 
     /**
      * Return a random floating-point number.
+     *
      * @param float|null $a The minimum value.
      * @param float|null $b The maximum value.
      * @return float A random floating-point number.
@@ -529,6 +584,7 @@ abstract class Math
 
     /**
      * Return a random integer.
+     *
      * @param int $a The minimum value.
      * @param int|null $b The maximum value.
      * @return int A random integer.
@@ -546,6 +602,7 @@ abstract class Math
 
     /**
      * Round a number.
+     *
      * @param int|float $number The input number.
      * @param int $precision The number of decimal digits to use.
      * @param int $mode The rounding mode.
@@ -558,6 +615,7 @@ abstract class Math
 
     /**
      * Get the sine of a number.
+     *
      * @param float $number The input number.
      * @return float The sine.
      */
@@ -568,6 +626,7 @@ abstract class Math
 
     /**
      * Get the hyperbolic sine of a number.
+     *
      * @param float $number The input number.
      * @return float The hyperbolic sine.
      */
@@ -578,6 +637,7 @@ abstract class Math
 
     /**
      * Get the square root of a number.
+     *
      * @param float $number The input number.
      * @return float The square root.
      */
@@ -588,6 +648,7 @@ abstract class Math
 
     /**
      * Calculate the sum of values.
+     *
      * @param int|float ...$numbers The input numbers.
      * @return int|float The sum of values.
      */
@@ -598,6 +659,7 @@ abstract class Math
 
     /**
      * Get the tangent of a number.
+     *
      * @param float $number The input number.
      * @return float The tangent.
      */
@@ -608,6 +670,7 @@ abstract class Math
 
     /**
      * Get the hyperbolic tangent of a number.
+     *
      * @param float $number The input number.
      * @return float The hyperbolic tangent.
      */
@@ -618,6 +681,7 @@ abstract class Math
 
     /**
      * Round a number to a specified step-size.
+     *
      * @param int|float $number The input number.
      * @param int|float $step The minimum step-size.
      * @return int|float The rounded number.

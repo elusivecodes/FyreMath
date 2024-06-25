@@ -56,5 +56,4 @@ final class MathTest extends TestCase
     use TanhTestTrait;
     use TanTestTrait;
     use ToStepTestTrait;
-
 }
