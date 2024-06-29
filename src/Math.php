@@ -98,8 +98,8 @@ abstract class Math
     /**
      * Get the absolute value of a number.
      *
-     * @param int|float $number The input number.
-     * @return int|float The absolute value.
+     * @param float|int $number The input number.
+     * @return float|int The absolute value.
      */
     public static function abs(float|int $number): float|int
     {
@@ -188,7 +188,7 @@ abstract class Math
      * Convert a binary number to decimal.
      *
      * @param string $binaryString The binary string.
-     * @return int|float The decimal number.
+     * @return float|int The decimal number.
      */
     public static function binaryToDecimal(string $binaryString): float|int
     {
@@ -198,7 +198,7 @@ abstract class Math
     /**
      * Round a number up.
      *
-     * @param int|float $number The input number.
+     * @param float|int $number The input number.
      * @return float The rounded number.
      */
     public static function ceil(float|int $number): float
@@ -209,10 +209,10 @@ abstract class Math
     /**
      * Clamp a number between a min and max.
      *
-     * @param int|float $number The input number.
-     * @param int|float $min The minimum number.
-     * @param int|float $max The maximum number.
-     * @return int|float The clamped number.
+     * @param float|int $number The input number.
+     * @param float|int $min The minimum number.
+     * @param float|int $max The maximum number.
+     * @return float|int The clamped number.
      */
     public static function clamp(float|int $number, float|int $min = 0, float|int $max = 1): float|int
     {
@@ -225,8 +225,8 @@ abstract class Math
     /**
      * Clamp a number between 0 and 100.
      *
-     * @param int|float $number The input number.
-     * @return int|float The clamped number.
+     * @param float|int $number The input number.
+     * @return float|int The clamped number.
      */
     public static function clampPercent(float|int $number): float|int
     {
@@ -236,7 +236,7 @@ abstract class Math
     /**
      * Convert a number between bases.
      *
-     * @param string|int $number The input number.
+     * @param int|string $number The input number.
      * @param int $fromBase The base of the number.
      * @param int $toBase The base to convert to.
      * @return string The number with converted base.
@@ -354,7 +354,7 @@ abstract class Math
     /**
      * Round a number down.
      *
-     * @param int|float $number The input number.
+     * @param float|int $number The input number.
      * @return float The rounded number.
      */
     public static function floor(float $number): float
@@ -378,7 +378,7 @@ abstract class Math
      * Convert a hex number to decimal.
      *
      * @param string $hexString The hex number.
-     * @return int|float The decimal number.
+     * @return float|int The decimal number.
      */
     public static function hexToDecimal(string $hexString): float|int
     {
@@ -515,7 +515,7 @@ abstract class Math
      * Convert an octal number to decimal.
      *
      * @param string $octalString The octal number.
-     * @return int|float The decimal number.
+     * @return float|int The decimal number.
      */
     public static function octalToDecimal(string $octalString): float|int
     {
@@ -525,9 +525,9 @@ abstract class Math
     /**
      * Raise a number to the power of exponent.
      *
-     * @param int|float $number The input number.
-     * @param int|float $exponent The exponent.
-     * @return int|float The number raised to the power of exponent.
+     * @param float|int $number The input number.
+     * @param float|int $exponent The exponent.
+     * @return float|int The number raised to the power of exponent.
      */
     public static function pow(float|int $number, float|int $exponent): float|int
     {
@@ -537,8 +537,8 @@ abstract class Math
     /**
      * Calculate the product of values.
      *
-     * @param int|float ...$numbers The input numbers.
-     * @return int|float The product of values.
+     * @param float|int ...$numbers The input numbers.
+     * @return float|int The product of values.
      */
     public static function product(float|int ...$numbers): float|int
     {
@@ -603,7 +603,7 @@ abstract class Math
     /**
      * Round a number.
      *
-     * @param int|float $number The input number.
+     * @param float|int $number The input number.
      * @param int $precision The number of decimal digits to use.
      * @param int $mode The rounding mode.
      * @return float The rounded number.
@@ -649,8 +649,8 @@ abstract class Math
     /**
      * Calculate the sum of values.
      *
-     * @param int|float ...$numbers The input numbers.
-     * @return int|float The sum of values.
+     * @param float|int ...$numbers The input numbers.
+     * @return float|int The sum of values.
      */
     public static function sum(float|int ...$numbers): float|int
     {
@@ -682,9 +682,9 @@ abstract class Math
     /**
      * Round a number to a specified step-size.
      *
-     * @param int|float $number The input number.
-     * @param int|float $step The minimum step-size.
-     * @return int|float The rounded number.
+     * @param float|int $number The input number.
+     * @param float|int $step The minimum step-size.
+     * @return float|int The rounded number.
      */
     public static function toStep(float|int $number, float|int $step = .01): float|int
     {
