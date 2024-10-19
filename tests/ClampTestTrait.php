@@ -18,7 +18,7 @@ trait ClampTestTrait
     public function testClampAbove(): void
     {
         $this->assertSame(
-            2.0,
+            2,
             Math::clamp(3, 1, 2)
         );
     }
@@ -26,7 +26,7 @@ trait ClampTestTrait
     public function testClampBelow(): void
     {
         $this->assertSame(
-            1.0,
+            1,
             Math::clamp(0, 1, 2)
         );
     }

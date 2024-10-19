@@ -10,7 +10,7 @@ trait MaxTestTrait
     public function testMax(): void
     {
         $this->assertSame(
-            150.0,
+            150,
             Math::max(25, 10, 50, 25, 150)
         );
     }

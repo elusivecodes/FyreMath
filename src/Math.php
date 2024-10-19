@@ -216,10 +216,7 @@ abstract class Math
      */
     public static function clamp(float|int $number, float|int $min = 0, float|int $max = 1): float|int
     {
-        return static::max(
-            $min,
-            static::min($max, $number)
-        );
+        return max($min, min($max, $number));
     }
 
     /**
@@ -230,7 +227,7 @@ abstract class Math
      */
     public static function clampPercent(float|int $number): float|int
     {
-        return static::clamp($number, 0, 100);
+        return max(0, min(100, $number));
     }
 
     /**
@@ -323,10 +320,7 @@ abstract class Math
      */
     public static function dist(float $x1, float $y1, float $x2, float $y2): float
     {
-        return static::hypot(
-            $x1 - $x2,
-            $y1 - $y2
-        );
+        return hypot($x1 - $x2, $y1 - $y2);
     }
 
     /**
@@ -492,10 +486,10 @@ abstract class Math
     /**
      * Find the highest value.
      *
-     * @param float ...$numbers The values to compare.
-     * @return float The highest value.
+     * @param float|int ...$numbers The values to compare.
+     * @return float|int The highest value.
      */
-    public static function max(float ...$numbers): float
+    public static function max(float|int ...$numbers): float|int
     {
         return max(...$numbers);
     }
@@ -503,10 +497,10 @@ abstract class Math
     /**
      * Find the lowest value.
      *
-     * @param float ...$numbers The values to compare.
-     * @return float The lowest value.
+     * @param float|int ...$numbers The values to compare.
+     * @return float|int The lowest value.
      */
-    public static function min(float ...$numbers): float
+    public static function min(float|int ...$numbers): float|int
     {
         return min(...$numbers);
     }
@@ -565,21 +559,17 @@ abstract class Math
      */
     public static function random(float|null $a = null, float|null $b = null): float
     {
+        $r = random_int(0, PHP_INT_MAX) / PHP_INT_MAX;
+
         if ($a === null) {
-            return random_int(0, static::INT_MAX) / static::INT_MAX;
+            return $r;
         }
 
         if ($b === null) {
-            return static::random() * $a;
+            return $r * $a;
         }
 
-        return static::map(
-            static::random(),
-            0,
-            1,
-            $a,
-            $b
-        );
+        return static::map($r, 0, 1, $a, $b);
     }
 
     /**
@@ -592,9 +582,7 @@ abstract class Math
     public static function randomInt(int $a, int|null $b = null): int
     {
         if ($b === null) {
-            return $a > 0 ?
-                random_int(0, $a) :
-                random_int($a, 0);
+            [$a, $b] = $a > 0 ? [0, $a] : [$a, 0];
         }
 
         return random_int($a, $b);
@@ -684,10 +672,10 @@ abstract class Math
      *
      * @param float|int $number The input number.
      * @param float|int $step The minimum step-size.
-     * @return float|int The rounded number.
+     * @return float The rounded number.
      */
-    public static function toStep(float|int $number, float|int $step = .01): float|int
+    public static function toStep(float|int $number, float|int $step = .01): float
     {
-        return static::round($number / $step) * $step;
+        return round($number / $step) * $step;
     }
 }

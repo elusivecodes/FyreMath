@@ -1,6 +1,6 @@
 # FyreMath
 
-**FyreMath** is a free, open-source math and number manipulation library for *PHP*.
+**FyreMath** is a free, open-source math library for *PHP*.
 
 
 ## Table Of Contents
@@ -236,7 +236,7 @@ $distance = Math::dist($x1, $y1, $x2, $y2);
 
 **Exp**
 
-Calculate the exponent of e.
+Calculate the exponent of `e`.
 
 - `$number` is the input number.
 
@@ -246,7 +246,7 @@ $exp = Math::exp($number);
 
 **Exp Minus 1**
 
-Calculate the exponent of e minus 1.
+Calculate the exponent of `e-1`.
 
 - `$number` is the input number.
 
@@ -443,13 +443,13 @@ Return a random floating-point number.
 - `$a` is a number representing the minimum value (inclusive).
 - `$b` is a number representing the maximum value (exclusive).
 
-If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
-
-If both arguments are omitted, this function will return a random number between 0 (inclusive) and 1 (exclusive).
-
 ```php
 $random = Math::random($a, $b);
 ```
+
+If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
+
+If both arguments are omitted, this function will return a random number between 0 (inclusive) and 1 (exclusive).
 
 **Random Int**
 
@@ -458,11 +458,11 @@ Return a random integer.
 - `$a` is a number representing the minimum value (inclusive).
 - `$b` is a number representing the maximum value (exclusive).
 
-If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
-
 ```php
 $randomInt = Math::randomInt($a, $b);
 ```
+
+If `$b` is omitted, this function will return a random number between 0 (inclusive) and `$a` (exclusive).
 
 **Round**
 

@@ -10,7 +10,7 @@ trait ClampPercentTestTrait
     public function testClampPercent(): void
     {
         $this->assertSame(
-            50.0,
+            50,
             Math::clampPercent(50)
         );
     }
@@ -18,7 +18,7 @@ trait ClampPercentTestTrait
     public function testClampPercentAbove(): void
     {
         $this->assertSame(
-            100.0,
+            100,
             Math::clampPercent(150)
         );
     }
@@ -26,7 +26,7 @@ trait ClampPercentTestTrait
     public function testClampPercentBelow(): void
     {
         $this->assertSame(
-            .0,
+            0,
             Math::clampPercent(-50)
         );
     }
