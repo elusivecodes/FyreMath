@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Tests;
 
 use Fyre\Utility\Math;
-use Fyre\Utility\Traits\MacroTrait;
+use Fyre\Utility\Traits\StaticMacroTrait;
 use PHPUnit\Framework\TestCase;
 
 use function class_uses;
@@ -64,7 +64,7 @@ final class MathTest extends TestCase
     public function testMacroable(): void
     {
         $this->assertContains(
-            MacroTrait::class,
+            StaticMacroTrait::class,
             class_uses(Math::class)
         );
     }

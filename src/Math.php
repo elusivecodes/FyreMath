@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Fyre\Utility;
 
-use Fyre\Utility\Traits\MacroTrait;
+use Fyre\Utility\Traits\StaticMacroTrait;
 
 use function abs;
 use function acos;
@@ -65,7 +65,7 @@ use const PHP_ROUND_HALF_UP;
  */
 abstract class Math
 {
-    use MacroTrait;
+    use StaticMacroTrait;
 
     public const E = M_E;
 
